@@ -34,7 +34,7 @@ build-arch:
 pack-arch:
 	bash ./script/pack-arch.sh $(TAG)
 
-build-all-arch: build-darwin build-window build-linux
+build-all-arch: build-linux
 
 build-darwin:
 	make build-arch OS=darwin ARCH=amd64
@@ -43,12 +43,7 @@ build-window:
 	make build-arch OS=windows ARCH=amd64 EXT=.exe
 
 build-linux:
-	make build-arch OS=linux ARCH=amd64
-	make build-arch OS=linux ARCH=arm
-	make build-arch OS=linux ARCH=arm64
-	make build-arch OS=linux ARCH=mips
         make build-arch OS=linux ARCH=mipsle
-	make build-arch OS=linux ARCH=386
 
 build-android:
 	make build-arch OS=android ARCH=amd64
