@@ -47,6 +47,7 @@ build-linux:
 	make build-arch OS=linux ARCH=arm
 	make build-arch OS=linux ARCH=arm64
 	make build-arch OS=linux ARCH=mips
+        make build-arch OS=linux ARCH=mipsle
 	make build-arch OS=linux ARCH=386
 
 build-android:
